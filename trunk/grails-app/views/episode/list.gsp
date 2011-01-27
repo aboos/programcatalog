@@ -9,7 +9,8 @@
         
         <style>
         .menuButton a.elist {
-	    	color: #3cf;
+	    	text-decoration: underline;
+	    	color:yellow;
 		}
     	</style>
     
@@ -17,7 +18,7 @@
     <body>
         <div class="body">
             <h1><g:message code="default.list.label" args="[entityName]" /></h1>
-            <p>Click on episode to edit</p>
+            <p>Click on episode to edit. Click on column headers to sort by that attribute.</p>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>

@@ -51,7 +51,8 @@
         }
         
         .menuButton a.home {
-	    	color: #3cf;
+	    	text-decoration: underline;
+	    	color:yellow;
 		}
         
         </style>

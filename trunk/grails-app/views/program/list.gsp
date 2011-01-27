@@ -9,7 +9,8 @@
         
         <style>
         .menuButton a.plist {
-	    	color: #3cf;
+	    	text-decoration: underline;
+	    	color:yellow;
 		}
         </style>
         
@@ -18,7 +19,7 @@
         <div class="body">
         
             <h1><g:message code="default.list.label" args="[entityName]" /></h1>
-            <p>click on a program to edit it or see episodes</p>
+            <p>click on a program to edit it or see episodes. Click on column headers to sort by that attribute.</p>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>

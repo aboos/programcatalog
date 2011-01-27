@@ -9,7 +9,8 @@
         
         <style>
         .menuButton a.elist {
-	    	color: #3cf;
+	    	text-decoration: underline;
+	    	color:yellow;
 		}
 		a {
 			color:#fff;
@@ -122,7 +123,7 @@
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="episode.program.label" default="Program" /></td>
                             
-                            <td valign="top" class="value"><g:link controller="program" action="show" id="${episodeInstance?.program?.id}">${episodeInstance?.program?.encodeAsHTML()}</g:link></td>
+                            <td valign="top" class="value"><g:link class="show" controller="program" action="show" id="${episodeInstance?.program?.id}">${episodeInstance?.program?.encodeAsHTML()}</g:link></td>
                             
                         </tr>
                     

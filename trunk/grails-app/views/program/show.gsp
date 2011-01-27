@@ -9,7 +9,9 @@
         
         <style>
         .menuButton a.plist {
-	    	color: #3cf;
+	    	text-decoration: underline;
+	    	color:yellow;
+	    	
 		}
 		
 		a {
@@ -83,7 +85,7 @@
                             <td valign="top" style="text-align: left;" class="value">
                                 <ul>
                                 <g:each in="${programInstance.episode}" var="e">
-                                    <li style="color:#fff"><g:link controller="episode" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></li>
+                                    <li style="color:#fff"><g:link class="show" controller="episode" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></li>
                                 </g:each>
                                 </ul>
                             </td>

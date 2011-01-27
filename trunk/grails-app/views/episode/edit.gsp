@@ -10,7 +10,8 @@
         
         <style>
         .menuButton a.elist {
-	    	color: #3cf;
+	    	text-decoration: underline;
+	    	color:yellow;
 		}
 		a {
 			color:#fff;
