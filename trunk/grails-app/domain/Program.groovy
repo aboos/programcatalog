@@ -5,7 +5,7 @@ class Program {
 	static searchable = {content: spellCheck 'include'};
 
     static constraints = {
-		id(max:Integer.MAX_VALUE, nullable:false)
+		//id(max:Integer.MAX_VALUE, nullable:false)
 		title(maxSize:255, nullable:true)
 		programkey(maxSize:25, nullable:false)
 		createdate(nullable:true)
@@ -17,7 +17,7 @@ class Program {
 	static hasMany = [episode:Episode]
 	
 	
-	Integer id
+	//Integer id
 	String title
 	String programkey
 	Date createdate
@@ -28,7 +28,8 @@ class Program {
 	static mapping = {
 		version false
 		episode sort: "createdate"
-		//id generator: 'assigned', name: "programid", type: 'Integer'
+		//id generator: 'assigned', name: "id", type: 'Integer'
+		id column: 'programid'
 		}
 	
 	String toString(){

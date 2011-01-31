@@ -48,15 +48,15 @@
                         
                             <!--<td><g:link action="show" id="${programInstance.id}">${fieldValue(bean: programInstance, field: "id")}</g:link></td>-->
                         
-                            <td><g:link action="show" id="${programInstance.id}">${fieldValue(bean: programInstance, field: "title")}</g:link></td>
+                            <td style="width:310px"><g:link action="show" id="${programInstance.id}">${fieldValue(bean: programInstance, field: "title")}</g:link></td>
                         
-                            <td>${fieldValue(bean: programInstance, field: "programkey")}</td>
+                            <td style="width:100px">${fieldValue(bean: programInstance, field: "programkey")}</td>
                         
-                            <td><g:formatDate date="${programInstance.createdate}" /></td>
+                            <td style="width:130px"><g:formatDate format="MM/dd/yyyy" date="${programInstance.createdate}" /></td>
                         
-                            <td>${fieldValue(bean: programInstance, field: "createby")}</td>
+                            <td style="width:130px">${fieldValue(bean: programInstance, field: "createby")}</td>
                         
-                            <td><g:formatDate date="${programInstance.lastmoddate}" /></td>
+                            <td style="width:130px"><g:formatDate format="MM/dd/yyyy" date="${programInstance.lastmoddate}" /></td>
                         
                         </tr>
                     </g:each>

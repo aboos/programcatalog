@@ -21,7 +21,7 @@ class EpisodeController {
         def episodeInstance = new Episode(params)
         if (episodeInstance.save(flush: true)) {
             flash.message = "${message(code: 'default.created.message', args: [message(code: 'episode.label', default: 'Episode'), episodeInstance.id])}"
-            redirect(action: "show", id: episodeInstance.id)
+			redirect(action: "show", id: episodeInstance.id)
         }
         else {
             render(view: "create", model: [episodeInstance: episodeInstance])

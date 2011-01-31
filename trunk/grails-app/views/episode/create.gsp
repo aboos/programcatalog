@@ -84,7 +84,7 @@
                                     <label for="startdate"><g:message code="episode.startdate.label" default="Startdate" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: episodeInstance, field: 'startdate', 'errors')}">
-                                    <g:datePicker name="startdate" precision="day" value="${episodeInstance?.startdate}" default="none" noSelection="['': '']" />
+                                    <g:datePicker name="startdate" years="${Calendar.instance.get(Calendar.YEAR)+3..1985}" precision="day" value="${episodeInstance?.startdate}" default="none" noSelection="['': '']" />
                                 </td>
                             </tr>
                         
@@ -93,7 +93,7 @@
                                     <label for="enddate"><g:message code="episode.enddate.label" default="Enddate" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: episodeInstance, field: 'enddate', 'errors')}">
-                                    <g:datePicker name="enddate" precision="day" value="${episodeInstance?.enddate}" default="none" noSelection="['': '']" />
+                                    <g:datePicker name="enddate" years="${Calendar.instance.get(Calendar.YEAR)+3..1985}" precision="day" value="${episodeInstance?.enddate}" default="none" noSelection="['': '']" />
                                 </td>
                             </tr>
                         
@@ -111,7 +111,7 @@
                                     <label for="createdate"><g:message code="episode.createdate.label" default="Date Created" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: episodeInstance, field: 'createdate', 'errors')}">
-                                    <g:datePicker name="createdate" precision="day" value="${episodeInstance?.createdate}" default="none" noSelection="['': '']" />
+                                    <g:datePicker name="createdate" years="${Calendar.instance.get(Calendar.YEAR)+3..1985}" precision="day" value="${episodeInstance?.createdate}" default="none" noSelection="['': '']" />
                                 </td>
                             </tr>
                         
@@ -129,7 +129,7 @@
                                     <label for="lastmoddate"><g:message code="episode.lastmoddate.label" default="Date Last Modified" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: episodeInstance, field: 'lastmoddate', 'errors')}">
-                                    <g:datePicker name="lastmoddate" precision="day" value="${episodeInstance?.lastmoddate}" default="none" noSelection="['': '']" />
+                                    <g:datePicker name="lastmoddate" years="${Calendar.instance.get(Calendar.YEAR)+3..1985}" precision="day" value="${episodeInstance?.lastmoddate}" default="none" noSelection="['': '']" />
                                 </td>
                             </tr>
                         
@@ -142,9 +142,9 @@
                                 </td>
                             </tr>
                         
-                            <tr class="prop">
+                           <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="program"><g:message code="episode.program.label" default="Program" /></label>
+                                  <label for="program"><g:message code="episode.program.label" default="Program" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: episodeInstance, field: 'program', 'errors')}">
                                     <g:select name="program.id" from="${Program.list()}" optionKey="id" value="${episodeInstance?.program?.id}" noSelection="['null': '']" />

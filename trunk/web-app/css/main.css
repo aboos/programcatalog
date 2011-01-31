@@ -135,7 +135,7 @@ div.center{
     padding-left: 25px;
 }
 
-.menuButton a.home:hover, a.plist:hover, a.elist:hover, a.pcreate:hover, a.ecreate:hover {
+.menuButton a.plist:hover, .menuButton a.home:hover, .menuButton a.elist:hover, .menuButton a.pcreate:hover, .menuButton a.ecreate:hover {
     color: #8af;
 }
 

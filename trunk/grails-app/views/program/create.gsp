@@ -58,7 +58,7 @@
                                     <label for="createdate"><g:message code="program.createdate.label" default="Date Created" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: programInstance, field: 'createdate', 'errors')}">
-                                    <g:datePicker name="createdate" precision="day" value="${programInstance?.createdate}" default="none" noSelection="['': '']" />
+                                    <g:datePicker name="createdate" years="${Calendar.instance.get(Calendar.YEAR)+3..1985}" precision="day" value="${programInstance?.createdate}" default="none" noSelection="['': '']" />
                                 </td>
                             </tr>
                         
@@ -76,7 +76,7 @@
                                     <label for="lastmoddate"><g:message code="program.lastmoddate.label" default="Date Last Modified" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: programInstance, field: 'lastmoddate', 'errors')}">
-                                    <g:datePicker name="lastmoddate" precision="day" value="${programInstance?.lastmoddate}" default="none" noSelection="['': '']" />
+                                    <g:datePicker name="lastmoddate" years="${Calendar.instance.get(Calendar.YEAR)+3..1985}" precision="day" value="${programInstance?.lastmoddate}" default="none" noSelection="['': '']" />
                                 </td>
                             </tr>
                         
