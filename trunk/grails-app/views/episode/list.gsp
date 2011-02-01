@@ -59,7 +59,7 @@
                         
                             <td style="width:90px"><g:formatDate format="MM/dd/yyyy" date="${episodeInstance.createdate}" /></td>
                         	
-                        	<g:if test="${episodeInstance.synopsis.length() > 80}"><g:set var = "syn" value="${episodeInstance.synopsis.substring(0,79)}..."/></g:if>
+                        	<g:if test="${episodeInstance.synopsis != null}"><g:if test="${episodeInstance.synopsis.length() > 80}"><g:set var = "syn" value="${episodeInstance.synopsis.substring(0,79)}..."/></g:if></g:if>
                             <g:else><g:set var="syn" value="${episodeInstance.synopsis}"/></g:else>
                             <td style="width:200px">${syn}</td>
                         

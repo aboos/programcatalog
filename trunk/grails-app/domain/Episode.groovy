@@ -3,7 +3,7 @@ import java.util.Date;
 
 class Episode {
 	
-	static searchable = {content: spellCheck 'include'};
+	static searchable = { except = ['belongsToProgram'] };
 
     static constraints = {
 		//id(blank:false, max:Integer.MAX_VALUE, nullable:false, insert:false, update:false)
@@ -19,7 +19,7 @@ class Episode {
 		createby(maxSize:30, nullable:true)
 		lastmoddate(nullable:true)
 		lastmodby(maxSize:30, nullable:true)
-		program(nullable:true)
+		//program(nullable:true)
     }
 	
 	//Integer id
@@ -47,5 +47,6 @@ class Episode {
 		id column:'episodeid'
 		program column:'programid'
 		}
+	
 	
 }

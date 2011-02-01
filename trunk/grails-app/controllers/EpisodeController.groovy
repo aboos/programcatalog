@@ -19,11 +19,16 @@ class EpisodeController {
 
     def save = {
         def episodeInstance = new Episode(params)
+		println("trying to save")
         if (episodeInstance.save(flush: true)) {
-            flash.message = "${message(code: 'default.created.message', args: [message(code: 'episode.label', default: 'Episode'), episodeInstance.id])}"
+			println("got to spot 1")
+            flash.message = "${message(code: 'default.created.message', args: [message(code: 'episode.label', default: 'Episode'), episodeInstance.title])}"
 			redirect(action: "show", id: episodeInstance.id)
+			println("got to spot 1")
+			
         }
         else {
+			println("got to spot 2")
             render(view: "create", model: [episodeInstance: episodeInstance])
         }
     }
@@ -42,7 +47,7 @@ class EpisodeController {
     def edit = {
         def episodeInstance = Episode.get(params.id)
         if (!episodeInstance) {
-            flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'episode.label', default: 'Episode'), params.id])}"
+            flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'episode.label', default: 'Episode'), params.title])}"
             redirect(action: "list")
         }
         else {
@@ -64,7 +69,7 @@ class EpisodeController {
             }
             episodeInstance.properties = params
             if (!episodeInstance.hasErrors() && episodeInstance.save(flush: true)) {
-                flash.message = "${message(code: 'default.updated.message', args: [message(code: 'episode.label', default: 'Episode'), episodeInstance.id])}"
+                flash.message = "${message(code: 'default.updated.message', args: [message(code: 'episode.label', default: 'Episode'), episodeInstance.title])}"
                 redirect(action: "show", id: episodeInstance.id)
             }
             else {

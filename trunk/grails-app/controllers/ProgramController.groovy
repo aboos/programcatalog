@@ -20,7 +20,7 @@ class ProgramController {
     def save = {
         def programInstance = new Program(params)
         if (programInstance.save(flush: true)) {
-            flash.message = "${message(code: 'default.created.message', args: [message(code: 'program.label', default: 'Program'), programInstance.id])}"
+            flash.message = "${message(code: 'default.created.message', args: [message(code: 'program.label', default: 'Program'), programInstance.title])}"
             redirect(action: "show", id: programInstance.id)
         }
         else {
@@ -64,7 +64,7 @@ class ProgramController {
             }
             programInstance.properties = params
             if (!programInstance.hasErrors() && programInstance.save(flush: true)) {
-                flash.message = "${message(code: 'default.updated.message', args: [message(code: 'program.label', default: 'Program'), programInstance.id])}"
+                flash.message = "${message(code: 'default.updated.message', args: [message(code: 'program.label', default: 'Program'), programInstance.title])}"
                 redirect(action: "show", id: programInstance.id)
             }
             else {
